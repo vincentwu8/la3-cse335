@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-struct Colors {
-    static let black = Color(red: 38 / 255, green: 40 / 255, blue: 41 / 255)
-    static let blue = Color(red: 44 / 255, green: 116 / 255, blue: 179 / 255)
-    static let red = Color(red: 240 / 255, green: 84 / 255, blue: 84 / 255)
-    static let green = Color(red: 47 / 255, green: 93 / 255, blue: 98 / 255)
-    
-    static var all: [Color] {
-        [Self.blue, Self.red, Self.green, Self.black]
-    }
-}
-
 enum CardType: String, CaseIterable {
     case visa = "VISA"
     case mastercard = "Mastercard"
@@ -38,7 +27,6 @@ struct CardDetails {
     var number: String = ""
     var validity: Date = .now
     var secureCode: String = ""
-    var color: Color = Colors.blue
     
     var formattedValidity: String {
         Self.dateFormatter.string(from: validity)
